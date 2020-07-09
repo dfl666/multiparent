@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class DemoController {
+public class DemoController2 {
 
     @Reference(version = "${demo.service.version}")
     private DemoService demoService;
 
-     //zhushi
-    @GetMapping("/say/{name}")
+
+    @GetMapping("/say2/{name}")
     public String sayHello(@PathVariable  String name){
         return demoService.sayHello(name);
     }
